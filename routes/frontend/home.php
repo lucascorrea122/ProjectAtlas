@@ -5,6 +5,7 @@ use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\User\AccountController;
 use App\Http\Controllers\Frontend\User\ProfileController;
 use App\Http\Controllers\Frontend\User\DashboardController;
+use App\Http\Controllers\Frontend\AtlasController;
 
 /*
  * Frontend Controllers
@@ -13,6 +14,7 @@ use App\Http\Controllers\Frontend\User\DashboardController;
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::post('contact/send', [ContactController::class, 'send'])->name('contact.send');
+Route::get('atlas', [AtlasController::class, 'index'])->name('atlas');
 
 /*
  * These frontend controllers require the user to be logged in
@@ -20,6 +22,7 @@ Route::post('contact/send', [ContactController::class, 'send'])->name('contact.s
  * These routes can not be hit if the password is expired
  */
 Route::group(['middleware' => ['auth', 'password_expires']], function () {
+
     Route::group(['namespace' => 'User', 'as' => 'user.'], function () {
         // User Dashboard Specific
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -29,5 +32,7 @@ Route::group(['middleware' => ['auth', 'password_expires']], function () {
 
         // User Profile Specific
         Route::patch('profile/update', [ProfileController::class, 'update'])->name('profile.update');
+
+
     });
 });

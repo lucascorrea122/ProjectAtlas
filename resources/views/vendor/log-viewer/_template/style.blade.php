@@ -65,7 +65,7 @@
 
     .level-none {
         background-color: none;
-        color: #AAA;
+        color: #aaaaaa;
     }
 
     .level-all,

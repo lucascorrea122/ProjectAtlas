@@ -15,6 +15,7 @@ return [
     'general' => [
         'home' => 'Home',
         'logout' => 'Logout',
+        'atlas' => 'Atlas',
     ],
 
     'frontend' => [
@@ -23,6 +24,7 @@ return [
         'login' => 'Login',
         'macros' => 'Macros',
         'register' => 'Register',
+        'tool' => 'Atlas Tool',
 
         'user' => [
             'account' => 'My Account',
