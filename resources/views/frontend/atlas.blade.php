@@ -1,3 +1,5 @@
+{{--<link  href="resources/js/AtlasTool/Atlas/index.html">--}}
+
 @extends('frontend.layouts.app')
 
 

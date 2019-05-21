@@ -12,7 +12,7 @@ class AtlasController extends Controller
      */
     public function index()
     {
-        return view('frontend.atlas');
+        return view('frontend.Atlas.index');
     }
 
 }
