@@ -15,7 +15,7 @@
             @endauth
 
 
-                <li class="nav-item"><a href="{{route('frontend.atlas.index')}}" class="nav-link {{ active_class(Active::checkRoute('frontend.user.tool')) }}">@lang('navs.frontend.tool')</a></li>
+                <li class="nav-item"><a href="{{route('frontend.atlas')}}" class="nav-link {{ active_class(Active::checkRoute('frontend.user.tool')) }}">@lang('navs.frontend.tool')</a></li>
 
 
             @guest
